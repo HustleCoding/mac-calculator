@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import NumberFormat from "react-number-format";
 import MacToolbar from "./MacToolbar";
+import Screen from "./Screen";
+import NumberFormat from "react-number-format";
 
 const Button = () => {
   const [preState, setPreState] = useState("");
@@ -8,6 +9,14 @@ const Button = () => {
   const [input, setInput] = useState("0");
   const [operator, setOperator] = useState(null);
   const [total, setTotal] = useState(false);
+
+  useEffect(() => {
+    setInput(curState);
+  }, [curState]);
+
+  useEffect(() => {
+    setInput("0");
+  }, []);
 
   const inputNum = (e) => {
     if (curState.includes(",") && e.target.innerText === ",") return;
@@ -21,14 +30,6 @@ const Button = () => {
       : setCurState(e.target.innerText);
     setTotal(false);
   };
-
-  useEffect(() => {
-    setInput(curState);
-  }, [curState]);
-
-  useEffect(() => {
-    setInput("0");
-  }, []);
 
   const operatorType = (e) => {
     setTotal(false);
@@ -91,22 +92,7 @@ const Button = () => {
   return (
     <div className="container">
       <div className="wrapper">
-        <div className="screen">
-          <MacToolbar />
-          {input !== "" || input === "0" ? (
-            <NumberFormat
-              value={input}
-              displayType={"text"}
-              thousandSeparator={true}
-            />
-          ) : (
-            <NumberFormat
-              value={preState}
-              displayType={"text"}
-              thousandSeparator={true}
-            />
-          )}
-        </div>
+        <Screen input={input} preState={preState} />
         <div className="btn light-gray" onClick={reset}>
           AC
         </div>
