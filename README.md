@@ -1,1 +1,1 @@
-# mac-calculator
+# the javascript mac-calculator
