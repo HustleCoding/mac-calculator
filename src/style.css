@@ -18,15 +18,13 @@ body {
 }
 
 .container {
-  height: 90vh;
-  width: 60vh;
+  width: 350px;
+  height: 500px;
   background-color: #403f46;
-  border-radius: 1rem;
-  padding: 0px;
-  border-radius: 1rem;
-  -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
-  -moz-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
-  box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.75);
+  border: 1px solid black;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 2px 2px 16px 2px #808080;
 }
 
 .wrapper {
@@ -50,7 +48,7 @@ body {
 .btn {
   display: grid;
   place-content: center;
-  background-color: #605f65;
+  background-color: #686868;
   color: white;
   cursor: pointer;
   font-weight: bold;
@@ -61,7 +59,7 @@ body {
 }
 
 .light-gray {
-  background-color: #534f58;
+  background-color: #484848;
   color: white;
 }
 

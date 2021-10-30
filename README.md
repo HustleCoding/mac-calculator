@@ -1,1 +1,1 @@
-# mac-calculator
+# typescript mac-calculator

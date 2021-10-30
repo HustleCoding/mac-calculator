@@ -1,7 +1,4 @@
-import App from "./App";
-import MacToolbar from "./MacToolbar";
 import Screen from "./Screen";
-import NumberFormat from "react-number-format";
 
 const Button = ({
   setCurState,
