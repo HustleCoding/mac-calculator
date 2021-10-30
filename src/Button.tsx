@@ -1,4 +1,5 @@
 import Screen from "./Screen";
+import * as React from "react";
 
 const Button = ({
   setCurState,
@@ -30,7 +31,7 @@ const Button = ({
     setOperator(e.target.innerText);
     if (curState === "") return;
     if (preState !== "") {
-      equals();
+      equals(e);
     } else {
       setPreState(curState);
       setCurState("");
@@ -41,7 +42,7 @@ const Button = ({
     if (e?.target.innerText === "=") {
       setTotal(true);
     }
-    let cal;
+    let cal: string | null;
     switch (operator) {
       case "÷":
         cal = String(parseFloat(preState) / parseFloat(curState));

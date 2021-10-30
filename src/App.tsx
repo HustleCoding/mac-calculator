@@ -2,8 +2,9 @@ import "./style.css";
 import { render } from "react-dom";
 import Button from "./Button";
 import { useState, useEffect } from "react";
+import * as React from "react";
 
-const App = () => {
+export const App = (): JSX.Element => {
   const [preState, setPreState] = useState("");
   const [curState, setCurState] = useState("");
   const [input, setInput] = useState("0");
@@ -35,7 +36,5 @@ const App = () => {
     </div>
   );
 };
-
-export default App;
 
 render(<App />, document.getElementById("root"));

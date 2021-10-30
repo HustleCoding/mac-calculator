@@ -1,3 +1,5 @@
+import * as React from "react";
+
 const MacToolbar = () => {
   return (
     <div className="mac-buttons">

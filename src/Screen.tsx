@@ -1,3 +1,4 @@
+import * as React from "react";
 import NumberFormat from "react-number-format";
 import MacToolbar from "./MacToolbar";
 
