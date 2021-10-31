@@ -1,13 +1,13 @@
 import "./style.css";
 import { render } from "react-dom";
 import Button from "./Button";
-import { useState, useEffect } from "react";
+import { useState, useEffect, FC } from "react";
 import * as React from "react";
 
-export const App = (): JSX.Element => {
-  const [preState, setPreState] = useState("");
-  const [curState, setCurState] = useState("");
-  const [input, setInput] = useState("0");
+export const App: FC = (): JSX.Element => {
+  const [preState, setPreState] = useState<string>("");
+  const [curState, setCurState] = useState<string>("");
+  const [input, setInput] = useState<string>("0");
   const [operator, setOperator] = useState(null);
   const [total, setTotal] = useState(false);
 

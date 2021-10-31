@@ -1,6 +1,7 @@
 import * as React from "react";
+import { FC } from "react";
 
-const MacToolbar = () => {
+const MacToolbar: FC = () => {
   return (
     <div className="mac-buttons">
       <div className="mac-buttons red-btn"></div>
