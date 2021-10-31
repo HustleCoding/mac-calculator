@@ -50,7 +50,7 @@ const Button = ({
       case "+":
         cal = String(parseFloat(preState) + parseFloat(curState));
         break;
-      case "X":
+      case "x":
         cal = String(parseFloat(preState) * parseFloat(curState));
         break;
       case "-":
@@ -110,7 +110,7 @@ const Button = ({
           9
         </div>
         <div className="btn orange" onClick={operatorType}>
-          X
+          x
         </div>
         <div className="btn" onClick={inputNum}>
           4
